@@ -34,6 +34,8 @@ xbps-install -Suv <br>
 <p></p>
 # cleanup the system <br>
 xbps-remove --clean-cache --remove-orphans <br>
+<p></p>
+# update the systems boot files <br>
 xbps-reconfigure -fa <br>
 <p></p>
 export LIBSEAT_BACKEND=builtin <br>
