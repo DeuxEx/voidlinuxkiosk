@@ -1,14 +1,14 @@
-# voidlinux kiosk-mode
-# this is my way to setup a kiosk running in wayland in void linux
-
-# First install void linux from live iso image
-
-# update the installer first
-xbps-install -u xbps-install
-
-# install cage (kiosk compositor) and chromium and wayland to be able to start up a browser in wayland 
-xbps-install cage chromium wayland
-
+# voidlinux kiosk-mode <br>
+# this is my way to setup a kiosk running in wayland in void linux <br>
+<p></p>
+# First install void linux from live iso image <br>
+<p></p>
+# update the installer first <br>
+xbps-install -u xbps-install <br>
+<p></p>
+# install cage (kiosk compositor) and chromium and wayland to be able to start up a browser in wayland  <br>
+xbps-install cage chromium wayland <br>
+<p></p>
 # install a good servicehandler (vsv) and texteditor (nano)
 xbps-install vsv nano 
 
