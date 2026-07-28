@@ -37,6 +37,7 @@ xbps-remove --clean-cache --remove-orphans <br>
 xbps-reconfigure -fa <br>
 <p></p>
 export LIBSEAT_BACKEND=builtin <br>
+export EDITOR=nano <br>
 <p></p>
 # create the needable files for auto-login and night/day-mode <br>
 nano ~/.bash_profile  <br>
