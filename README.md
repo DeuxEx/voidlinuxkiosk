@@ -10,6 +10,9 @@ xbps-install -u xbps-install <br>
 # install cage (kiosk compositor) and chromium and wayland to be able to start up a browser in wayland  <br>
 xbps-install cage chromium wayland <br>
 <p></p>
+# install wlr-randr to be able to flip the screen on wayland systems <br>
+xbps-install wlr-randr <br>
+<p></p>
 # install a good servicehandler (vsv) and texteditor (nano) <br>
 xbps-install vsv nano  <br>
 <p></p>
