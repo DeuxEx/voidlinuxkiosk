@@ -19,47 +19,47 @@ xbps-install seatd elogind dbus  <br>
 # install a needable font <br>
 xbps-install ttf-opensans <br>
 <p></p>
-# install videodrivers and vulkans for wayland setup
-xbps-install mesa-dri mesa-vaapi mesa-vulkan-intel intel-video-accel vulkan-loader
-
-# install avahi and modules to get mdns working
-xbps-install avahi avahi-autoipd avahi-compat-libs avahi-discover avahi-glib-libs avahi-ui-libs avahi-ui-libs-gtk3 avahi-ui-utils avahi-utils nss-mdns
-
-# we want to have the screen off at night and start at the morning
-xbps-install wlopm cronie
-
-# Make a system update
-xbps-install -Suv
-
-
-# cleanup the system
-xbps-remove --clean-cache --remove-orphans
-xbps-reconfigure -fa
-
-export LIBSEAT_BACKEND=builtin
-
-# create the needable files for auto-login and night/day-mode
-nano ~/.bash_profile 
-nano /etc/sv/agetty-tty1/run 
-nano ~/sleep.sh
-nano ~/wake.sh 
-nano /etc/nsswitch.conf 
-nano /etc/avahi/avahi-daemon.conf 
-
-# link the services so they autostart from now on
-ln -s /etc/sv/dbus/ /etc/runit/runsvdir/default/
-ln -s /etc/sv/elogind/ /etc/runit/runsvdir/default/
-ln -s /etc/sv/seatd/ /etc/runit/runsvdir/default/
-ln -s /etc/sv/chronyd /etc/runit/runsvdir/default/
-ln -s /etc/sv/cronie/ /etc/runit/runsvdir/default/
-ln -s /etc/sv/avahi-daemon/ /etc/runit/runsvdir/default/
-
-# put the user in the correct group
-usermod -aG video,input void
-
-# make the files executable
-chmod +x ~/wake.sh 
-chmod +x ~/sleep.sh 
+# install videodrivers and vulkans for wayland setup <br>
+xbps-install mesa-dri mesa-vaapi mesa-vulkan-intel intel-video-accel vulkan-loader <br>
+<p></p>
+# install avahi and modules to get mdns working <br>
+xbps-install avahi avahi-autoipd avahi-compat-libs avahi-discover avahi-glib-libs avahi-ui-libs avahi-ui-libs-gtk3 avahi-ui-utils avahi-utils nss-mdns <br>
+<p></p>
+# we want to have the screen off at night and start at the morning <br>
+xbps-install wlopm cronie <br>
+<p></p>
+# Make a system update <br>
+xbps-install -Suv <br>
+<p></p>
+<p></p>
+# cleanup the system <br>
+xbps-remove --clean-cache --remove-orphans <br>
+xbps-reconfigure -fa <br>
+<p></p>
+export LIBSEAT_BACKEND=builtin <br>
+<p></p>
+# create the needable files for auto-login and night/day-mode <br>
+nano ~/.bash_profile  <br>
+nano /etc/sv/agetty-tty1/run <br> 
+nano ~/sleep.sh <br>
+nano ~/wake.sh  <br>
+nano /etc/nsswitch.conf  <br>
+nano /etc/avahi/avahi-daemon.conf  <br>
+<p></p>
+# link the services so they autostart from now on <br>
+ln -s /etc/sv/dbus/ /etc/runit/runsvdir/default/ <br>
+ln -s /etc/sv/elogind/ /etc/runit/runsvdir/default/ <br>
+ln -s /etc/sv/seatd/ /etc/runit/runsvdir/default/ <br>
+ln -s /etc/sv/chronyd /etc/runit/runsvdir/default/ <br>
+ln -s /etc/sv/cronie/ /etc/runit/runsvdir/default/ <br>
+ln -s /etc/sv/avahi-daemon/ /etc/runit/runsvdir/default/ <br>
+<p></p>
+# put the user in the correct group <br>
+usermod -aG video,input void <br>
+<p></p>
+# make the files executable <br>
+chmod +x ~/wake.sh  <br>
+chmod +x ~/sleep.sh  <br>
 
 
 crontab -e
