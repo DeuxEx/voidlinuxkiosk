@@ -1,3 +1,4 @@
+<p></p>
 # voidlinux kiosk-mode <br>
 # this is my way to setup a kiosk running in wayland in void linux <br>
 <p></p>
@@ -9,15 +10,15 @@ xbps-install -u xbps-install <br>
 # install cage (kiosk compositor) and chromium and wayland to be able to start up a browser in wayland  <br>
 xbps-install cage chromium wayland <br>
 <p></p>
-# install a good servicehandler (vsv) and texteditor (nano)
-xbps-install vsv nano 
-
-# install some runit services which we need
-xbps-install seatd elogind dbus 
-
-# install a needable font
-xbps-install ttf-opensans
-
+# install a good servicehandler (vsv) and texteditor (nano) <br>
+xbps-install vsv nano  <br>
+<p></p>
+# install some runit services which we need <br>
+xbps-install seatd elogind dbus  <br>
+<p></p>
+# install a needable font <br>
+xbps-install ttf-opensans <br>
+<p></p>
 # install videodrivers and vulkans for wayland setup
 xbps-install mesa-dri mesa-vaapi mesa-vulkan-intel intel-video-accel vulkan-loader
 
